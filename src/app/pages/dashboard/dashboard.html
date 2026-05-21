@@ -1,112 +1,155 @@
-<section class="min-h-screen bg-slate-50 px-4 py-8 sm:px-6 lg:px-10">
+<section class="min-h-screen bg-slate-950 px-4 py-8 sm:px-6 lg:px-10">
   <div class="mx-auto max-w-7xl space-y-8">
-    <div class="flex flex-col gap-5 rounded-[2rem] bg-white p-8 shadow-xl ring-1 ring-slate-200 sm:flex-row sm:items-end sm:justify-between">
-      <div class="space-y-3">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-600">Panel de control</p>
-        <h1 class="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Mi tiendita</h1>
-        <p class="max-w-2xl text-sm leading-6 text-slate-600">
-          Revisa ventas, pedidos y stock desde un solo lugar. Todo organizado para que vendas más rápido.
-        </p>
-      </div>
-      <div class="rounded-[1.75rem] bg-slate-900 px-6 py-5 text-slate-50 shadow-lg shadow-slate-200/10">
-        <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Saldo disponible</p>
-        <p class="mt-3 text-3xl font-semibold">$4,860</p>
-      </div>
-    </div>
-
-    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-      <article class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Ventas del día</p>
-        <p class="mt-4 text-3xl font-bold text-slate-950">$1,380</p>
-        <p class="mt-2 text-sm text-slate-500">12% más que ayer</p>
-      </article>
-      <article class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Clientes activos</p>
-        <p class="mt-4 text-3xl font-bold text-slate-950">84</p>
-        <p class="mt-2 text-sm text-slate-500">Interacción reciente</p>
-      </article>
-      <article class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Productos en stock</p>
-        <p class="mt-4 text-3xl font-bold text-slate-950">142</p>
-        <p class="mt-2 text-sm text-slate-500">Listos para vender</p>
-      </article>
-      <article class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Pedidos pendientes</p>
-        <p class="mt-4 text-3xl font-bold text-slate-950">6</p>
-        <p class="mt-2 text-sm text-slate-500">Requieren atención</p>
-      </article>
-    </div>
-
-    <div class="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-      <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-        <div class="flex items-center justify-between gap-4">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Últimos pedidos</p>
-            <h2 class="mt-3 text-2xl font-semibold text-slate-950">Actividades recientes</h2>
-          </div>
-          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            Hoy
-          </span>
-        </div>
-
-        <ul class="mt-7 space-y-4">
-          <li class="flex items-center justify-between rounded-[1.5rem] bg-slate-50 p-4">
-            <div>
-              <p class="font-semibold text-slate-950">Orden #1028</p>
-              <p class="text-sm text-slate-500">Pagado • Entregado</p>
-            </div>
-            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              Entregado
-            </span>
-          </li>
-          <li class="flex items-center justify-between rounded-[1.5rem] bg-slate-50 p-4">
-            <div>
-              <p class="font-semibold text-slate-950">Orden #1029</p>
-              <p class="text-sm text-slate-500">Pagado • En preparación</p>
-            </div>
-            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-amber-700">
-              En preparación
-            </span>
-          </li>
-          <li class="flex items-center justify-between rounded-[1.5rem] bg-slate-50 p-4">
-            <div>
-              <p class="font-semibold text-slate-950">Orden #1030</p>
-              <p class="text-sm text-slate-500">Pago confirmado • Listo para envío</p>
-            </div>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
-              Listo
-            </span>
-          </li>
-          <li class="flex items-center justify-between rounded-[1.5rem] bg-slate-50 p-4">
-            <div>
-              <p class="font-semibold text-slate-950">Orden #1031</p>
-              <p class="text-sm text-slate-500">Pendiente de pago</p>
-            </div>
-            <span class="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-rose-700">
-              Pago pendiente
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="rounded-[2rem] bg-gradient-to-br from-violet-600 via-indigo-600 to-sky-500 p-8 text-white shadow-xl shadow-slate-900/10">
-        <div class="space-y-4">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-200/90">Recomendación rápida</p>
-          <h2 class="text-3xl font-semibold tracking-tight">Optimiza tu inventario</h2>
-          <p class="max-w-xl text-sm leading-6 text-slate-100/85">
-            Revise los productos con stock bajo y agrega promociones para vender más rápido esta semana.
+    <div class="overflow-hidden rounded-[2rem] bg-slate-900/95 p-8 shadow-2xl shadow-slate-950/40 ring-1 ring-white/10 sm:p-10">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div class="max-w-2xl space-y-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400">Panel de control</p>
+          <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Mi tiendita</h1>
+          <p class="text-base leading-7 text-slate-300">
+            Lleva tu tienda al siguiente nivel con métricas en tiempo real, pedidos y productos visualizados en un solo panel.
           </p>
         </div>
 
-        <div class="mt-8 grid gap-3 sm:grid-cols-2">
-          <div class="rounded-[1.5rem] bg-white/10 p-5">
-            <p class="text-xs uppercase tracking-[0.24em] text-slate-200/80">items bajos</p>
-            <p class="mt-3 text-2xl font-semibold">14</p>
+        <div class="flex flex-wrap gap-3">
+          <button class="rounded-2xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">
+            Nueva oferta
+          </button>
+          <button class="rounded-2xl border border-slate-700 bg-slate-950/70 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500">
+            Ver reportes
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="rounded-[1.75rem] border border-slate-800 bg-slate-950/80 p-6 shadow-lg shadow-slate-950/30 transition hover:-translate-y-1">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">Ventas hoy</p>
+          <p class="mt-4 text-4xl font-semibold text-white">$1,380</p>
+          <p class="mt-2 text-sm text-slate-500">+12% respecto ayer</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-800 bg-slate-950/80 p-6 shadow-lg shadow-slate-950/30 transition hover:-translate-y-1">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">Clientes activos</p>
+          <p class="mt-4 text-4xl font-semibold text-white">84</p>
+          <p class="mt-2 text-sm text-slate-500">Interacción reciente</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-800 bg-slate-950/80 p-6 shadow-lg shadow-slate-950/30 transition hover:-translate-y-1">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">Productos en stock</p>
+          <p class="mt-4 text-4xl font-semibold text-white">142</p>
+          <p class="mt-2 text-sm text-slate-500">Listos para vender</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-800 bg-slate-950/80 p-6 shadow-lg shadow-slate-950/30 transition hover:-translate-y-1">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">Pedidos pendientes</p>
+          <p class="mt-4 text-4xl font-semibold text-white">6</p>
+          <p class="mt-2 text-sm text-slate-500">Requieren atención</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-6 xl:grid-cols-[1.7fr_1fr]">
+      <section class="rounded-[2rem] bg-white p-8 shadow-2xl shadow-slate-950/10 ring-1 ring-slate-200/10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Resumen de ventas</p>
+            <h2 class="mt-2 text-3xl font-semibold text-slate-950">Tendencia semanal</h2>
           </div>
-          <div class="rounded-[1.5rem] bg-white/10 p-5">
-            <p class="text-xs uppercase tracking-[0.24em] text-slate-200/80">órdenes nuevas</p>
-            <p class="mt-3 text-2xl font-semibold">4</p>
+          <div class="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-sm text-slate-600">
+            <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            Aumento del 18% esta semana
           </div>
+        </div>
+
+        <div class="mt-8 space-y-6">
+          <div class="grid gap-4 md:grid-cols-4">
+            <div class="rounded-[1.5rem] bg-slate-50 p-5">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Meta diaria</p>
+              <p class="mt-3 text-2xl font-semibold text-slate-950">$1,500</p>
+            </div>
+            <div class="rounded-[1.5rem] bg-slate-50 p-5">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Promedio de ticket</p>
+              <p class="mt-3 text-2xl font-semibold text-slate-950">$45</p>
+            </div>
+            <div class="rounded-[1.5rem] bg-slate-50 p-5">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Conversions</p>
+              <p class="mt-3 text-2xl font-semibold text-slate-950">24%</p>
+            </div>
+            <div class="rounded-[1.5rem] bg-slate-50 p-5">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Pedidos</p>
+              <p class="mt-3 text-2xl font-semibold text-slate-950">38</p>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] bg-slate-950 p-6 text-slate-50">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Ventas por día</p>
+                <p class="mt-2 text-3xl font-semibold">$1,380</p>
+              </div>
+              <div class="space-y-1 text-right">
+                <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Meta</p>
+                <p class="text-sm font-semibold text-emerald-300">92% alcanzado</p>
+              </div>
+            </div>
+            <div class="mt-6 grid h-44 grid-cols-7 gap-3">
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-14 w-full rounded-full bg-emerald-400"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-20 w-full rounded-full bg-cyan-400"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-10 w-full rounded-full bg-slate-400"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-24 w-full rounded-full bg-emerald-300"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-18 w-full rounded-full bg-sky-400"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-12 w-full rounded-full bg-purple-400"></span></span>
+              <span class="flex items-end justify-center rounded-3xl bg-slate-800 px-2 py-1"><span class="block h-16 w-full rounded-full bg-emerald-400"></span></span>
+            </div>
+            <div class="mt-3 grid grid-cols-7 gap-3 text-[11px] uppercase tracking-[0.24em] text-slate-500">
+              <span>Lun</span>
+              <span>Mar</span>
+              <span>Mié</span>
+              <span>Jue</span>
+              <span>Vie</span>
+              <span>Sáb</span>
+              <span>Dom</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-6 rounded-[2rem] bg-slate-800 p-6 shadow-2xl shadow-slate-950/10 ring-1 ring-slate-200/10 sm:p-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-300">Información rápida</p>
+            <h2 class="mt-2 text-2xl font-semibold text-white">Atajos y recomendaciones</h2>
+          </div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Nuevo
+          </span>
+        </div>
+
+        <div class="space-y-4">
+          <a class="block rounded-[1.75rem] border border-slate-700 bg-slate-900/70 p-5 transition hover:bg-slate-900" href="#">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-white">Agregar nuevo producto</p>
+                <p class="mt-1 text-sm text-slate-300">Carga un producto rápidamente con foto y precio.</p>
+              </div>
+              <span class="rounded-2xl bg-emerald-500/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">Acción</span>
+            </div>
+          </a>
+          <a class="block rounded-[1.75rem] border border-slate-700 bg-slate-900/70 p-5 transition hover:bg-slate-900" href="#">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-white">Revisar promociones</p>
+                <p class="mt-1 text-sm text-slate-300">Destaca ofertas claves para tus productos más vendidos.</p>
+              </div>
+              <span class="rounded-2xl bg-sky-500/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-200">Ver</span>
+            </div>
+          </a>
+          <a class="block rounded-[1.75rem] border border-slate-700 bg-slate-900/70 p-5 transition hover:bg-slate-900" href="#">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-white">Gestionar envíos</p>
+                <p class="mt-1 text-sm text-slate-300">Asegura que los pedidos lleguen a tiempo y sin contratiempos.</p>
+              </div>
+              <span class="rounded-2xl bg-amber-500/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-200">Revisar</span>
+            </div>
+          </a>
         </div>
       </section>
     </div>
