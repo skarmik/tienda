@@ -1,59 +1,64 @@
-# Tiendita
+# Tiendita - Frontend E-commerce
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+Este proyecto es una interfaz de usuario (Frontend) para una tienda en línea, enfocada en el diseño visual y la experiencia de usuario. Incluye tanto la vista pública de la tienda como un panel de administración (Dashboard).
 
-## Development server
+El proyecto actualmente se encuentra en su fase inicial, concentrando todos los esfuerzos en la maquetación, componentes interactivos y el diseño visual adaptable.
 
-To start a local development server, run:
+## Tecnologías Utilizadas
 
-```bash
+- **Angular 21.2.3**: Framework principal para la estructura, componentes y enrutamiento.
+- **Tailwind CSS**: Framework de CSS utilizado para el diseño personalizado, responsivo y moderno.
+
+## Características Actuales
+
+- **Diseño de Tienda**: Catálogo de productos, vistas de tarjetas de productos y diseño de la interfaz de navegación.
+- **Dashboard de Administración**: Panel interno para visualizar métricas, gráficas estáticas y control de inventario de forma visual.
+- **Diseño Responsivo**: Adaptado para visualizarse correctamente en dispositivos móviles, tabletas y computadoras de escritorio.
+
+## Estado del Proyecto
+
+Actualmente, el proyecto es **estrictamente de diseño (Frontend)**. No cuenta con conexión a base de datos, backend ni API real. Todos los datos de los productos y gráficas del dashboard están simulados con fines de demostración.
+
+---
+
+## Servidor de Desarrollo
+
+Para iniciar un servidor de desarrollo local, ejecute el siguiente comando:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Una vez que el servidor esté corriendo, abra su navegador e ingrese a http://localhost:4200/. La aplicación se recargará automáticamente cada vez que modifique alguno de los archivos fuente.
 
-## Code scaffolding
+## Generación de Código
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI incluye herramientas para la generación automática de código. Para crear un nuevo componente, ejecute:
 
-```bash
-ng generate component component-name
-```
+ng generate component nombre-del-componente
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para obtener una lista completa de los esquemas disponibles (como components, directives o pipes), ejecute:
 
-```bash
 ng generate --help
-```
 
-## Building
+## Compilación (Build)
 
-To build the project run:
+Para compilar el proyecto y prepararlo para producción, ejecute:
 
-```bash
 ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Esto compilará el proyecto y guardará los archivos resultantes en el directorio dist/. Por defecto, la compilación de producción optimiza la aplicación para lograr el mejor rendimiento y velocidad.
 
-## Running unit tests
+## Pruebas Unitarias
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Para ejecutar las pruebas unitarias utilizando el entorno de pruebas Vitest, use el siguiente comando:
 
-```bash
 ng test
-```
 
-## Running end-to-end tests
+## Pruebas End-to-End (E2E)
 
-For end-to-end (e2e) testing, run:
+Para ejecutar pruebas de extremo a extremo, utilice:
 
-```bash
 ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Recursos Adicionales
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para obtener más información sobre el uso de Angular CLI, incluyendo referencias detalladas de los comandos, visite la página de Angular CLI Overview and Command Reference (https://angular.dev/tools/cli).
