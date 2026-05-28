@@ -1,14 +1,11 @@
-<div
-*ngIf="visible"
-class="fixed inset-0 z-50
+<div *ngIf="visible" class="fixed inset-0 z-50
 flex items-center justify-center
 bg-black/60 backdrop-blur-sm
 animate-fadeIn">
 
-    <!-- Modal -->
+  <!-- Modal -->
 
-    <div
-    class="w-full max-w-2xl
+  <div class="w-full max-w-2xl
     bg-[#151922]
     border border-slate-800
     rounded-3xl
@@ -16,146 +13,164 @@ animate-fadeIn">
     overflow-hidden
     animate-scaleIn">
 
-        <!-- Header -->
+    <!-- Header -->
 
-        <div class="flex items-center justify-between p-6 border-b border-slate-800">
+    <div class="flex items-center justify-between p-6 border-b border-slate-800">
 
-            <div>
+      <div>
 
-                <h2 class="text-2xl font-semibold text-white">
-                    Agregar Producto
-                </h2>
+        <h2 class="text-2xl font-semibold text-white">
+          Agregar Producto
+        </h2>
 
-                <p class="text-sm text-gray-500 mt-1">
-                    Completa la información del producto
-                </p>
+        <p class="text-sm text-gray-500 mt-1">
+          Completa la información del producto
+        </p>
 
-            </div>
+      </div>
 
-            <button
-            (click)="cerrarModal()"
-            class="w-10 h-10
+      <button (click)="cerrarModal()" class="w-10 h-10
             rounded-xl
             bg-slate-800
             hover:bg-red-500/20
             hover:text-red-400
             transition-all duration-300">
 
-                ✕
+        ✕
 
-            </button>
+      </button>
+
+    </div>
+
+
+    <!-- Formulario -->
+
+    <form class="p-6 space-y-6" (ngSubmit)="guardarProducto()">
+
+      <div>
+
+        <label class="block text-sm text-gray-400 mb-2">
+          Nombre del producto
+        </label>
+
+        <input type="text" name="nombre" [(ngModel)]="producto.nombre" placeholder="Producto..." class="w-full
+        bg-[#1d2330]
+        border border-slate-700
+        rounded-xl
+        px-4 py-3
+        text-white
+        focus:outline-none
+        focus:border-cyan-400">
+
+      </div>
+
+
+      <div>
+
+        <label class="block text-sm text-gray-400 mb-2">
+          Código
+        </label>
+
+        <input type="text" name="codigo" [(ngModel)]="producto.codigo" placeholder="Código..." class="w-full
+        bg-[#1d2330]
+        border border-slate-700
+        rounded-xl
+        px-4 py-3
+        text-white
+        focus:outline-none
+        focus:border-cyan-400">
+
+      </div>
+
+
+      <div>
+
+        <label class="block text-sm text-gray-400 mb-2">
+          Categoría
+        </label>
+
+        <input type="text" name="categoria" [(ngModel)]="producto.categoria" placeholder="Categoría..." class="w-full
+        bg-[#1d2330]
+        border border-slate-700
+        rounded-xl
+        px-4 py-3
+        text-white
+        focus:outline-none
+        focus:border-cyan-400">
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div>
+
+          <label class="block text-sm text-gray-400 mb-2">
+            Precio
+          </label>
+
+          <input type="number" name="precio" [(ngModel)]="producto.precio" placeholder="$0.00" class="w-full
+            bg-[#1d2330]
+            border border-slate-700
+            rounded-xl
+            px-4 py-3
+            text-white
+            focus:outline-none
+            focus:border-cyan-400">
 
         </div>
 
 
-        <!-- Formulario -->
+        <div>
 
-        <form class="p-6 space-y-6">
+          <label class="block text-sm text-gray-400 mb-2">
+            Stock
+          </label>
 
-            <div>
+          <input type="number" name="stock" [(ngModel)]="producto.stock" placeholder="0" class="w-full
+            bg-[#1d2330]
+            border border-slate-700
+            rounded-xl
+            px-4 py-3
+            text-white
+            focus:outline-none
+            focus:border-cyan-400">
 
-                <label class="block text-sm text-gray-400 mb-2">
-                    Nombre del producto
-                </label>
+        </div>
 
-                <input
-                type="text"
-                placeholder="Producto..."
-                class="w-full
-                bg-[#1d2330]
-                border border-slate-700
-                rounded-xl
-                px-4 py-3
-                text-white
-                focus:outline-none
-                focus:border-cyan-400">
-
-            </div>
+      </div>
 
 
-            <div class="grid md:grid-cols-2 gap-6">
+      <div class="flex justify-end gap-4 pt-4">
 
-                <div>
+        <button type="button" (click)="cerrarModal()" class="px-5 py-3
+        rounded-xl
+        border border-slate-700
+        text-gray-300
+        hover:bg-slate-800">
 
-                    <label class="block text-sm text-gray-400 mb-2">
-                        Precio
-                    </label>
+          Cancelar
 
-                    <input
-                    type="number"
-                    placeholder="$0.00"
-                    class="w-full
-                    bg-[#1d2330]
-                    border border-slate-700
-                    rounded-xl
-                    px-4 py-3
-                    text-white
-                    focus:outline-none
-                    focus:border-cyan-400">
-
-                </div>
+        </button>
 
 
-                <div>
+        <button type="submit" class="px-6 py-3
+        rounded-xl
+        bg-gradient-to-r
+        from-indigo-600
+        to-cyan-500
+        font-medium
+        hover:scale-105
+        transition-all duration-300">
 
-                    <label class="block text-sm text-gray-400 mb-2">
-                        Stock
-                    </label>
+          Guardar
 
-                    <input
-                    type="number"
-                    placeholder="0"
-                    class="w-full
-                    bg-[#1d2330]
-                    border border-slate-700
-                    rounded-xl
-                    px-4 py-3
-                    text-white
-                    focus:outline-none
-                    focus:border-cyan-400">
+        </button>
 
-                </div>
+      </div>
 
-            </div>
+    </form>
 
-
-            <!-- Footer -->
-
-            <div class="flex justify-end gap-4 pt-4">
-
-                <button
-                type="button"
-                (click)="cerrarModal()"
-                class="px-5 py-3
-                rounded-xl
-                border border-slate-700
-                text-gray-300
-                hover:bg-slate-800">
-
-                    Cancelar
-
-                </button>
-
-
-                <button
-                type="submit"
-                class="px-6 py-3
-                rounded-xl
-                bg-gradient-to-r
-                from-indigo-600
-                to-cyan-500
-                font-medium
-                hover:scale-105
-                transition-all duration-300">
-
-                    Guardar
-
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
+  </div>
 
 </div>

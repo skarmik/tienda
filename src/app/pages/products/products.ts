@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ModalProduct } from "../../components/modalProduct/modalProduct";
 
 @Component({
@@ -12,9 +12,15 @@ import { ModalProduct } from "../../components/modalProduct/modalProduct";
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Products {
+export class Products implements OnInit {
 
   modalAgregar:boolean = false;
+
+  productos:any[] = [];
+
+  ngOnInit(): void {
+    this.cargarProductos();
+  }
 
   abrirModal(){
     this.modalAgregar = true;
@@ -22,5 +28,35 @@ export class Products {
 
   cerrarModal(){
     this.modalAgregar = false;
+  }
+
+  cargarProductos() {
+    const productosGuardados = localStorage.getItem('productos');
+
+    if(productosGuardados){
+      this.productos = JSON.parse(productosGuardados);
+    }
+  }
+
+  agregarProducto(producto:any){
+
+    this.productos.push(producto);
+
+    localStorage.setItem(
+      'productos',
+      JSON.stringify(this.productos)
+    );
+
+    this.cerrarModal();
+  }
+
+  eliminarProducto(index:number){
+
+    this.productos.splice(index,1);
+
+    localStorage.setItem(
+      'productos',
+      JSON.stringify(this.productos)
+    );
   }
 }
