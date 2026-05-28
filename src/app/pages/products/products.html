@@ -1,0 +1,249 @@
+<div class="bg-[#151922]
+rounded-3xl
+border border-slate-800
+overflow-hidden
+shadow-[0_0_30px_rgba(0,0,0,.2)]">
+
+  <!-- Header -->
+
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-5 p-6 border-b border-slate-800">
+
+    <div>
+
+      <h2 class="text-2xl font-semibold text-white">
+        Control de Productos
+      </h2>
+
+      <p class="text-sm text-gray-500 mt-1">
+        Administra y supervisa el inventario de productos
+      </p>
+
+    </div>
+
+    <div class="flex gap-4">
+
+      <div class="relative">
+
+        <input type="text" placeholder="Buscar producto..." class="bg-[#1d2330]
+                border border-slate-700
+                text-gray-200
+                rounded-xl
+                pl-4 pr-4 py-3
+                w-64
+                focus:outline-none
+                focus:border-cyan-400
+                focus:shadow-[0_0_15px_rgba(34,211,238,.25)]
+                transition-all duration-300">
+
+      </div>
+
+      <button (click)="abrirModal()" class="px-6 py-3
+            rounded-xl
+            bg-gradient-to-r
+            from-indigo-600
+            to-cyan-500
+            font-medium
+            hover:scale-105
+            hover:shadow-[0_0_25px_rgba(59,130,246,.45)]
+            active:scale-95
+            transition-all duration-300">
+
+        + Agregar Producto
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Tabla -->
+
+  <div class="overflow-x-auto">
+
+    <table class="w-full">
+
+      <thead class="bg-[#1b202c]">
+
+        <tr class="text-left text-gray-400 text-sm">
+
+          <th class="p-5">ID</th>
+          <th class="p-5">Producto</th>
+          <th class="p-5">Categoría</th>
+          <th class="p-5">Precio</th>
+          <th class="p-5">Stock</th>
+          <th class="p-5">Estado</th>
+          <th class="p-5">Acciones</th>
+
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr class="border-t border-slate-800 hover:bg-slate-800/40 transition-all duration-300">
+
+          <td class="p-5 text-gray-400">
+            #001
+          </td>
+
+          <td class="p-5">
+
+            <div>
+
+              <p class="font-medium">
+                Coca Cola 600ml
+              </p>
+
+              <p class="text-xs text-gray-500">
+                Código: CC600
+              </p>
+
+            </div>
+
+          </td>
+
+          <td class="p-5 text-gray-300">
+            Bebidas
+          </td>
+
+          <td class="p-5">
+            $18
+          </td>
+
+          <td class="p-5">
+            35
+          </td>
+
+          <td class="p-5">
+
+            <span class="px-3 py-1 rounded-full
+                        bg-emerald-500/20
+                        text-emerald-400
+                        text-sm">
+
+              Disponible
+
+            </span>
+
+          </td>
+
+          <td class="p-5">
+
+            <div class="flex gap-2">
+
+              <button class="px-3 py-2 rounded-lg
+                            bg-cyan-500/10
+                            text-cyan-400
+                            hover:bg-cyan-500/20
+                            transition">
+
+                Editar
+
+              </button>
+
+              <button class="px-3 py-2 rounded-lg
+                            bg-red-500/10
+                            text-red-400
+                            hover:bg-red-500/20
+                            transition">
+
+                Eliminar
+
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+
+
+        <tr class="border-t border-slate-800 hover:bg-slate-800/40 transition-all duration-300">
+
+          <td class="p-5 text-gray-400">
+            #002
+          </td>
+
+          <td class="p-5">
+
+            <div>
+
+              <p class="font-medium">
+                Sabritas Original
+              </p>
+
+              <p class="text-xs text-gray-500">
+                Código: SB001
+              </p>
+
+            </div>
+
+          </td>
+
+          <td class="p-5 text-gray-300">
+            Botanas
+          </td>
+
+          <td class="p-5">
+            $20
+          </td>
+
+          <td class="p-5">
+            10
+          </td>
+
+          <td class="p-5">
+
+            <span class="px-3 py-1 rounded-full
+                        bg-yellow-500/20
+                        text-yellow-400
+                        text-sm">
+
+              Bajo stock
+
+            </span>
+
+          </td>
+
+          <td class="p-5">
+
+            <div class="flex gap-2">
+
+              <button class="px-3 py-2 rounded-lg
+                            bg-cyan-500/10
+                            text-cyan-400
+                            hover:bg-cyan-500/20
+                            transition">
+
+                Editar
+
+              </button>
+
+              <button class="px-3 py-2 rounded-lg
+                            bg-red-500/10
+                            text-red-400
+                            hover:bg-red-500/20
+                            transition">
+
+                Eliminar
+
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+  <app-modal-product [visible]="modalAgregar" (cerrar)="cerrarModal()">
+  </app-modal-product>
+
+</div>
