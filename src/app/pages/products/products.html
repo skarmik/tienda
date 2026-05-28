@@ -78,14 +78,14 @@ shadow-[0_0_30px_rgba(0,0,0,.2)]">
         </tr>
 
       </thead>
-
-
       <tbody>
 
+        @for(producto of productos; track $index){
+
         <tr class="border-t border-slate-800 hover:bg-slate-800/40 transition-all duration-300">
 
           <td class="p-5 text-gray-400">
-            #001
+            #{{ $index + 1 }}
           </td>
 
           <td class="p-5">
@@ -93,11 +93,11 @@ shadow-[0_0_30px_rgba(0,0,0,.2)]">
             <div>
 
               <p class="font-medium">
-                Coca Cola 600ml
+                {{ producto.nombre }}
               </p>
 
               <p class="text-xs text-gray-500">
-                Código: CC600
+                Código: {{ producto.codigo }}
               </p>
 
             </div>
@@ -105,25 +105,24 @@ shadow-[0_0_30px_rgba(0,0,0,.2)]">
           </td>
 
           <td class="p-5 text-gray-300">
-            Bebidas
+            {{ producto.categoria }}
           </td>
 
           <td class="p-5">
-            $18
+            ${{ producto.precio }}
           </td>
 
           <td class="p-5">
-            35
+            {{ producto.stock }}
           </td>
 
           <td class="p-5">
 
-            <span class="px-3 py-1 rounded-full
-                        bg-emerald-500/20
-                        text-emerald-400
-                        text-sm">
+            <span class="px-3 py-1 rounded-full text-sm" [class]="producto.stock > 15
+            ? 'bg-emerald-500/20 text-emerald-400'
+            : 'bg-yellow-500/20 text-yellow-400'">
 
-              Disponible
+              {{ producto.stock > 15 ? 'Disponible' : 'Bajo stock' }}
 
             </span>
 
@@ -134,20 +133,20 @@ shadow-[0_0_30px_rgba(0,0,0,.2)]">
             <div class="flex gap-2">
 
               <button class="px-3 py-2 rounded-lg
-                            bg-cyan-500/10
-                            text-cyan-400
-                            hover:bg-cyan-500/20
-                            transition">
+                        bg-cyan-500/10
+                        text-cyan-400
+                        hover:bg-cyan-500/20
+                        transition">
 
                 Editar
 
               </button>
 
-              <button class="px-3 py-2 rounded-lg
-                            bg-red-500/10
-                            text-red-400
-                            hover:bg-red-500/20
-                            transition">
+              <button (click)="eliminarProducto($index)" class="px-3 py-2 rounded-lg
+                  bg-red-500/10
+                  text-red-400
+                  hover:bg-red-500/20
+                  transition">
 
                 Eliminar
 
@@ -159,91 +158,17 @@ shadow-[0_0_30px_rgba(0,0,0,.2)]">
 
         </tr>
 
-
-
-        <tr class="border-t border-slate-800 hover:bg-slate-800/40 transition-all duration-300">
-
-          <td class="p-5 text-gray-400">
-            #002
-          </td>
-
-          <td class="p-5">
-
-            <div>
-
-              <p class="font-medium">
-                Sabritas Original
-              </p>
-
-              <p class="text-xs text-gray-500">
-                Código: SB001
-              </p>
-
-            </div>
-
-          </td>
-
-          <td class="p-5 text-gray-300">
-            Botanas
-          </td>
-
-          <td class="p-5">
-            $20
-          </td>
-
-          <td class="p-5">
-            10
-          </td>
-
-          <td class="p-5">
-
-            <span class="px-3 py-1 rounded-full
-                        bg-yellow-500/20
-                        text-yellow-400
-                        text-sm">
-
-              Bajo stock
-
-            </span>
-
-          </td>
-
-          <td class="p-5">
-
-            <div class="flex gap-2">
-
-              <button class="px-3 py-2 rounded-lg
-                            bg-cyan-500/10
-                            text-cyan-400
-                            hover:bg-cyan-500/20
-                            transition">
-
-                Editar
-
-              </button>
-
-              <button class="px-3 py-2 rounded-lg
-                            bg-red-500/10
-                            text-red-400
-                            hover:bg-red-500/20
-                            transition">
-
-                Eliminar
-
-              </button>
-
-            </div>
-
-          </td>
-
-        </tr>
+        }
 
       </tbody>
 
     </table>
 
   </div>
-  <app-modal-product [visible]="modalAgregar" (cerrar)="cerrarModal()">
-  </app-modal-product>
+  <app-modal-product
+  [visible]="modalAgregar"
+  (cerrar)="cerrarModal()"
+  (guardar)="agregarProducto($event)">
+</app-modal-product>
 
 </div>
